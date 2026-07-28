@@ -1,9 +1,13 @@
 # 📚 PaperMind
-### Your research papers, made conversational.
+### AI-Powered Document Question Answering System.
 
 🔗 **Live Demo:** [https://papermind-ejnapjogvxmqkdj8muxi7r.streamlit.app/]
 
-PaperMind is an AI-powered research paper assistant that allows users to upload research papers and interact with them using natural language. It uses Retrieval-Augmented Generation (RAG) to answer questions, summarize content, and retrieve relevant sections from documents.
+PaperMind is an AI-powered document question answering system built using Retrieval-Augmented Generation (RAG). The application allows users to upload one or more PDF documents, process their contents, and interact with them through natural language queries.
+
+The system performs document preprocessing, text chunking, embedding generation, vector storage using FAISS, and semantic retrieval to find relevant information from uploaded documents. A Large Language Model (LLM) then generates accurate, context-aware responses based on the retrieved document sections.
+
+PaperMind demonstrates the complete RAG workflow, enabling efficient information retrieval and conversational analysis of research papers and other document collections.
 
 ---
 
