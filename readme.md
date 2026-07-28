@@ -1,7 +1,7 @@
 # 📚 PaperMind
 ### Your research papers, made conversational.
 
-🔗 **Live Demo:** [Add Streamlit App Link Here]
+🔗 **Live Demo:** [https://papermind-ejnapjogvxmqkdj8muxi7r.streamlit.app/]
 
 PaperMind is an AI-powered research paper assistant that allows users to upload research papers and interact with them using natural language. It uses Retrieval-Augmented Generation (RAG) to answer questions, summarize content, and retrieve relevant sections from documents.
 
