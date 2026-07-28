@@ -88,7 +88,7 @@ PaperMind/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/PaperMind.git
+git clone https://github.com/NikhilGarg21/PaperMind.git
 cd PaperMind
 ```
 
