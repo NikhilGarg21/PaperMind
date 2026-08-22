@@ -1,3 +1,38 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables / secrets
 .env
-vector_db
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Streamlit
+.streamlit/
+
+# Logs
+logs/
+*.log
+
+# DVC cache
+.dvc/cache/
+
+# Generated vector database
+vector_db/
+
+# Local uploaded PDFs
 data/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+/vector_db
+/chat_output.txt
+ 
+chat_output.txt

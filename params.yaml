@@ -1,0 +1,8 @@
+read_pdf:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+chat:
+  temperature: 0
+  retrieval_k: 5
+  display_chunks: 3

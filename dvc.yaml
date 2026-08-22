@@ -1,0 +1,33 @@
+stages:
+
+  build_vector_store:
+    cmd: python read_pdf.py
+    deps:
+    - read_pdf.py
+    - data
+    params:
+    - read_pdf.chunk_size
+    - read_pdf.chunk_overlap
+    outs:
+    - vector_db
+
+  test_chatbot:
+    cmd: python chat.py
+    deps:
+    - chat.py
+    - vector_db
+    - params.yaml
+    params:
+    - chat.temperature
+    - chat.retrieval_k
+    - chat.display_chunks
+    outs:
+    - chat_output.txt
+
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step

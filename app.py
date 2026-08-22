@@ -2,7 +2,7 @@ import os
 import streamlit as st
 
 from read_pdf import build_vector_store
-from chat import load_chatbot, ask_question
+from chat import load_chatbot, ask_question 
 
 APP_NAME = "PaperMind"
 TAGLINE = "AI-Powered Document Question Answering System"
@@ -131,9 +131,10 @@ if build_clicked:
 
         build_vector_store()
 
-        vectorstore, chain = load_chatbot()
+        vectorstore, chain, params = load_chatbot()
         st.session_state.vectorstore = vectorstore
         st.session_state.chain = chain
+        st.session_state.params = params
         st.session_state.vault_file_names = [file.name for file in uploaded_files]
 
     st.success("Knowledge base ready!")
@@ -167,6 +168,7 @@ if prompt:
                     prompt,
                     st.session_state.vectorstore,
                     st.session_state.chain,
+                    st.session_state.params,
                 )
 
             st.write(answer)
