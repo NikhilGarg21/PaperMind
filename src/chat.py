@@ -8,8 +8,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
-from src.logger import get_logger
-from src.docs_preprocess import format_docs , clean_text , is_low_quality_chunk
+from logger import get_logger
+from docs_preprocess import format_docs , clean_text , is_low_quality_chunk
 from dvclive import Live
 
 logger = get_logger("chat")
