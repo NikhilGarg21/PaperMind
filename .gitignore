@@ -35,4 +35,4 @@ Thumbs.db
 /vector_db
 /chat_output.txt
  
-chat_output.txt
+output/

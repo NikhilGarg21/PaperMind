@@ -8,8 +8,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
-from logger import get_logger
-from docs_preprocess import format_docs , clean_text , is_low_quality_chunk
+from src.logger import get_logger
+from src.docs_preprocess import format_docs , clean_text , is_low_quality_chunk
 from dvclive import Live
 
 logger = get_logger("chat")
@@ -234,7 +234,8 @@ def main():
 
             live.log_metric("retrieved_chunks", len(display_data))
 
-        with open("chat_output.txt", "w", encoding="utf-8") as file:
+        os.makedirs("output", exist_ok=True)
+        with open("output/chat_output.txt", "w", encoding="utf-8") as file:
             file.write(f"Question:\n{sample_question}\n\n")
             file.write(f"Answer:\n{answer}\n\n")
             file.write("Retrieved Chunks:\n")

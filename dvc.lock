@@ -1,17 +1,17 @@
 schema: '2.0'
 stages:
   build_vector_store:
-    cmd: python read_pdf.py
+    cmd: python -m src.read_pdf
     deps:
     - path: data
       hash: md5
       md5: 49050b1a4ecd6f3c7aa6a1e5b05a7bfd.dir
       size: 3391499
       nfiles: 2
-    - path: read_pdf.py
+    - path: src/read_pdf.py
       hash: md5
-      md5: 6016cb8a91f38e5e2f817f8ca3064f7b
-      size: 4716
+      md5: ba262cb163c264c032bd18e05b237b7a
+      size: 4720
     params:
       params.yaml:
         read_pdf.chunk_overlap: 200
@@ -19,23 +19,23 @@ stages:
     outs:
     - path: vector_db
       hash: md5
-      md5: 44d87b54d0372e3aa8cb165fb57cf7d4.dir
+      md5: e651bb381dce5d8316b8f38db4a01254.dir
       size: 177879
       nfiles: 2
   test_chatbot:
-    cmd: python chat.py
+    cmd: python -m src.chat
     deps:
-    - path: chat.py
-      hash: md5
-      md5: 718b7934da4c1073682540f6797d94e9
-      size: 9411
     - path: params.yaml
       hash: md5
       md5: 0539ced0b2b19f91c86ea6cb1c051c4c
       size: 119
+    - path: src/chat.py
+      hash: md5
+      md5: 7ad446cd61f5964cbada9eff45f52359
+      size: 9472
     - path: vector_db
       hash: md5
-      md5: 44d87b54d0372e3aa8cb165fb57cf7d4.dir
+      md5: e651bb381dce5d8316b8f38db4a01254.dir
       size: 177879
       nfiles: 2
     params:
@@ -44,7 +44,7 @@ stages:
         chat.retrieval_k: 5
         chat.temperature: 0
     outs:
-    - path: chat_output.txt
+    - path: output/chat_output.txt
       hash: md5
       md5: 1ebaa4a77d0af6b9a6903c2d656ee106
       size: 4972

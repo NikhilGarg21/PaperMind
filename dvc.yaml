@@ -1,9 +1,9 @@
 stages:
 
   build_vector_store:
-    cmd: python read_pdf.py
+    cmd: python -m src.read_pdf
     deps:
-    - read_pdf.py
+    - src/read_pdf.py
     - data
     params:
     - read_pdf.chunk_size
@@ -12,9 +12,9 @@ stages:
     - vector_db
 
   test_chatbot:
-    cmd: python chat.py
+    cmd: python -m src.chat
     deps:
-    - chat.py
+    - src/chat.py
     - vector_db
     - params.yaml
     params:
@@ -22,7 +22,7 @@ stages:
     - chat.retrieval_k
     - chat.display_chunks
     outs:
-    - chat_output.txt
+    - output/chat_output.txt
 
 params:
 - dvclive/params.yaml

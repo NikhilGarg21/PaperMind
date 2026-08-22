@@ -1,8 +1,8 @@
 import os
 import streamlit as st
 
-from read_pdf import build_vector_store
-from chat import load_chatbot, ask_question 
+from src.read_pdf import build_vector_store
+from src.chat import load_chatbot, ask_question 
 
 APP_NAME = "PaperMind"
 TAGLINE = "AI-Powered Document Question Answering System"
