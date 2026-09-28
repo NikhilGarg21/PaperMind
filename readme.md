@@ -2,7 +2,7 @@
 
 ### AI-Powered Document Question Answering System
 
-🔗 **Live Demo:** https://papermind-ejnapjogvxmqkdj8muxi7r.streamlit.app/
+🔗 **Live Demo:** [https://papermind-ejnapjogvxmqkdj8muxi7r.streamlit.app/](https://papermind-mddg3baohz7jrmmh8paltb.streamlit.app/)
 
 PaperMind is an AI-powered document question answering system built using **Retrieval-Augmented Generation (RAG)**. Users can upload one or more PDF documents and interact with them through natural language queries.
 
